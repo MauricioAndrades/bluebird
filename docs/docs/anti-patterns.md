@@ -85,14 +85,15 @@ Second example is creating a function that does nothing but manually wrap a call
 
 ```js
 function applicationFunction(arg1) {
-    return new Promise(function(resolve, reject){ //Or Q.defer() in Q
-      libraryFunction(arg1, function (err, value) {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(value);
-        }
-    });
+	return new Promise(function(resolve, reject) { //Or Q.defer() in Q
+		libraryFunction(arg1, function(err, value) {
+			if (err) {
+				reject(err);
+			} else {
+				reslove(value);
+			}
+		});
+	});
 }
 ```
 
